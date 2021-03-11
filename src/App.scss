@@ -2,7 +2,7 @@
 
 //variables
 
-$boxShodow: 1px 5px 20px rgba(0, 0, 0, 0.2);
+$boxShadow: 1px 5px 20px rgba(0, 0, 0, 0.2);
 $light-blue: #c8dcdc;
 $light-grey: #a5aaaf;
 $dark-violet: #2d2d46;
@@ -26,7 +26,7 @@ $gold: #a0a000;
     // background-repeat: no-repeat;
     height: 45vh;
     position: relative;
-    box-shadow: $boxShodow;
+    box-shadow: $boxShadow;
 
     @media (max-width: 768px) {
       background-size: cover;
@@ -133,7 +133,7 @@ $gold: #a0a000;
     }
 
     &:hover {
-      box-shadow: $boxShodow;
+      box-shadow: $boxShadow;
       background: rgba($primary, 0.1);
       color: $primary;
       & ion-icon {
