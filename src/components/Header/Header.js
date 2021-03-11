@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { getNumbers } from "../../actions/getAction";
 
-export const Header = ({ cartProps }) => {
+const Header = ({ cartProps }) => {
   console.log(cartProps);
 
   useEffect(() => {

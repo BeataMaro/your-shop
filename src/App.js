@@ -14,6 +14,7 @@ import { Home } from "./components/Home";
 import { Products } from "./components/Products";
 import { Cart } from "./components/Cart";
 import { Account } from "./components/Account";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Breadcrumbs />
           <Home />
           <Products />
+          <Footer />
         </BrowserRouter>
       </div>
     </Provider>

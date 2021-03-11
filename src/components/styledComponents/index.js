@@ -25,15 +25,19 @@ const StyledProductImage = styled.img`
 export const ProductImage = ({ imgAlt, imgSrc }) => {
   return <StyledProductImage src={imgSrc} alt={imgAlt} />;
 };
-
 //PRODUCT WRAPPER COMPONENT
 
 const StyledProductWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.greyBlue};
-  /* padding: 0.5rem; */
-  width: 30%;
   position: relative;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    width: 33.3%;
+  }
 `;
 
 export const ProductWrapper = ({ children }) => {

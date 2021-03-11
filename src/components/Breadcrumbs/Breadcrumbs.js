@@ -1,4 +1,5 @@
 import React from "react";
+import "./styledBreadcrumbs.scss";
 
 export const Breadcrumbs = () => {
   return (
@@ -9,7 +10,8 @@ export const Breadcrumbs = () => {
         </li>
         <li>
           <a href='#'>
-            <ion-icon name='chevron-back-outline'></ion-icon>Jackets
+            <ion-icon name='chevron-back-outline'></ion-icon>
+            Jackets
           </a>
         </li>
         <li>

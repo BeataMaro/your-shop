@@ -1,4 +1,5 @@
 import React from "react";
+import "./styledDiscountBar.scss";
 
 export const DiscountBar = () => {
   return (

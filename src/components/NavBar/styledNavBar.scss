@@ -1,0 +1,35 @@
+@import "../../App.scss";
+
+.navBar {
+  color: $black;
+  background-color: #ebf0f5;
+  display: flex;
+  border-bottom: 0.6px solid #dcd2d2;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+
+  &__item {
+    color: $light-grey;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem;
+    width: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    & ion-icon {
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+      box-shadow: $boxShadow;
+      background: rgba($primary, 0.1);
+      color: $primary;
+      & ion-icon {
+        color: $gold;
+      }
+    }
+  }
+}

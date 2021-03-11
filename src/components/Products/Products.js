@@ -1,4 +1,5 @@
 import React from "react";
+import "./styledProducts.scss";
 
 //Redux
 import { connect } from "react-redux";
