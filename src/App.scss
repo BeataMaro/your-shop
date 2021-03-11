@@ -46,10 +46,19 @@ $gold: #a0a000;
     &__title {
       color: $black;
       z-index: 200;
-      font-size: 1.8rem;
 
-      @media (min-width: 768px) {
-        font-size: 2rem;
+      //logo dot
+      & span {
+        color: orangered;
+        margin: 0 0.05em;
+      }
+      //logo
+      & h1 {
+        font-size: 1.8rem;
+
+        @media (min-width: 768px) {
+          font-size: 2.5rem;
+        }
       }
     }
 
@@ -84,13 +93,14 @@ $gold: #a0a000;
       &--cart,
       &--favourites,
       &--account {
-        transition: 0.2s ease-in;
+        transition: 0.1s ease;
         & ion-icon {
           padding: 0.2em;
           vertical-align: bottom;
           background-color: #e1e6e6;
           border-radius: 50%;
           z-index: 100;
+          transition: 0.1s ease;
         }
         &:hover ion-icon {
           background: $primary;

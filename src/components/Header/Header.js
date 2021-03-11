@@ -16,7 +16,9 @@ const Header = ({ cartProps }) => {
       <div className='App-header__overlay'></div>
       <nav className='App-header__nav'>
         <NavLink to='/' className='App-header__title'>
-          <h1>YOUR.Shop</h1>
+          <h1>
+            YOUR<span>.</span>Shop
+          </h1>
         </NavLink>
         <ul className='App-header__menu'>
           <li className='App-header__menu--account'>

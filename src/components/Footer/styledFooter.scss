@@ -6,4 +6,12 @@
   color: $light-grey;
   background-color: $dark-violet;
   font-size: 1rem;
+
+  &__link {
+    color: orangered;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
