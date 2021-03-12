@@ -1,5 +1,5 @@
 import React from "react";
-import "./styledProducts.scss";
+import "./Products.scss";
 
 //Redux
 import { connect } from "react-redux";
@@ -18,15 +18,10 @@ export const Products = ({ addCart }) => {
     <Wrapper>
       <div className='products'>
         <ProductWrapper>
-          <div className='products__wrapper'>
-            <ProductImage imgSrc={skirt} imgAlt='skirt' />
-            <button
-              className='products__button'
-              onClick={() => addCart("skirt")}
-            >
-              <ion-icon name='basket-outline'></ion-icon>Add to cart
-            </button>
-          </div>
+          <ProductImage imgSrc={skirt} imgAlt='skirt' />
+          <button className='products__button' onClick={() => addCart("skirt")}>
+            <ion-icon name='basket-outline'></ion-icon>Add to cart
+          </button>
         </ProductWrapper>
         <ProductWrapper>
           <div className='products__wrapper'>

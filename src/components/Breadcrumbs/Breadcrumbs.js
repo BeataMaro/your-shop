@@ -1,5 +1,5 @@
 import React from "react";
-import "./styledBreadcrumbs.scss";
+import "./Breadcrumbs.scss";
 
 export const Breadcrumbs = () => {
   return (

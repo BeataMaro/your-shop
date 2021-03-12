@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const cartStyles = {
   padding: "2rem",
-  backgroundColor: "pink",
+  backgroundColor: "white",
 };
 
 const Cart = ({ cartProps }) => {

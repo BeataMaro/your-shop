@@ -24,11 +24,12 @@ $gold: #a0a000;
     // background-position: 50% 30%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 45vh;
+    height: 60vh;
     position: relative;
     box-shadow: $boxShadow;
 
     @media (min-width: 768px) {
+      height: 45vh;
       background-repeat: repeat;
       background-size: contain;
     }
@@ -44,7 +45,10 @@ $gold: #a0a000;
     }
 
     &__title {
-      color: $black;
+      color: $white;
+      background: $black;
+      align-self: flex-start;
+      padding: 0.2em 0.6em;
       z-index: 200;
 
       //logo dot
@@ -54,24 +58,25 @@ $gold: #a0a000;
       }
       //logo
       & h1 {
-        font-size: 1.8rem;
+        font-size: 3rem;
 
         @media (min-width: 768px) {
-          font-size: 2.5rem;
+          font-size: 4rem;
         }
       }
     }
 
     &__nav {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       padding: 2rem;
+      justify-content: space-between;
     }
 
     &__menu {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       z-index: 2;
 
       & li {
@@ -108,6 +113,7 @@ $gold: #a0a000;
       }
       @media (min-width: 768px) {
         flex-direction: row;
+        align-self: flex-start;
       }
     }
   }

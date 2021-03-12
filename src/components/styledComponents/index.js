@@ -31,6 +31,15 @@ const StyledProductWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.greyBlue};
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  &:hover {
+    .products__button {
+      opacity: 1;
+    }
+  }
 
   @media (min-width: 768px) {
     width: 50%;

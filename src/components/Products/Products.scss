@@ -9,18 +9,6 @@
   justify-content: space-evenly;
   cursor: pointer;
 
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    &:hover {
-      .products__button {
-        opacity: 1;
-      }
-    }
-  }
-
   &__button {
     font-size: 1.8rem;
     color: $primary;
