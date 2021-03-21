@@ -18,6 +18,10 @@ const StyledCart = styled.div`
     align-items: center;
   }
 
+  & ul {
+    display: block;
+  }
+
   @media (min-width: 768px) {
     width: 50%;
   }
