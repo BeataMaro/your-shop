@@ -10,6 +10,8 @@
   cursor: pointer;
 
   &__button {
+    display: flex;
+    justify-content: space-between;
     font-size: 1.8rem;
     color: $primary;
     position: absolute;
@@ -20,6 +22,10 @@
     opacity: 0;
     transition: all 0.3s ease-in;
     cursor: pointer;
+
+    & span {
+      margin-left: 10px;
+    }
 
     &:hover {
       color: $white;

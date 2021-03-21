@@ -13,20 +13,21 @@ const Cart = ({ cartProps }) => {
   return (
     <StyledCart>
       <h2>Cart</h2>
-      <div>All products: {cartNumbers}</div>
-      <div>Total: {cartCost}$</div>
+
       <div>
         <p>Your products:</p>
         {inCart.length && (
-          <ul>
+          <div>
             {inCart.map((p) => (
-              <li key={nanoid()}>
+              <div key={nanoid()}>
                 {p.name} ({p.numbers}) {p.price}$
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
       </div>
+      <div>All products: {cartNumbers}</div>
+      <div>Total: {cartCost}$</div>
     </StyledCart>
   );
 };

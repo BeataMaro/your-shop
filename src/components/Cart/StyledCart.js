@@ -14,12 +14,10 @@ const StyledCart = styled.div`
     flex: 1;
     margin-top: 2rem;
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
-  }
-
-  & ul {
-    display: block;
   }
 
   @media (min-width: 768px) {

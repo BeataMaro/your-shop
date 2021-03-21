@@ -6,13 +6,9 @@ const ProductDetails = ({ cartProps, match }) => {
   const product = match.params.id;
   const price = products[product].price;
   const name = products[product].name;
-
-  console.log(name);
   return (
     <div>
-      <h2>Product details</h2>
-      <p>{name}</p>
-
+      <h2>{name}</h2>
       <div>{price}$</div>
     </div>
   );

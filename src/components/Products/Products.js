@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Products.scss";
+import { Basket3 } from "@styled-icons/bootstrap/Basket3";
 
 import { Breadcrumbs } from "../Breadcrumbs";
 
@@ -9,7 +10,7 @@ import { connect } from "react-redux";
 import { addCart } from "../../actions/addAction";
 
 //Styled Components
-import { Wrapper, ProductWrapper, ProductImage } from "../styledComponents";
+import { Wrapper, ProductWrapper, ProductImage } from "./StyledProducts";
 
 //Images
 import skirt from "../../assets/products/skirt.jpg";
@@ -25,36 +26,46 @@ export const Products = ({ addCart }) => {
           <ProductWrapper>
             <Link to='/products/skirt'>
               <ProductImage imgSrc={skirt} imgAlt='skirt' />
-              <button
-                className='products__button'
-                onClick={() => addCart("skirt")}
-              >
-                <ion-icon name='basket-outline'></ion-icon>Add to cart
-              </button>
             </Link>
+            <button
+              className='products__button'
+              onClick={() => addCart("skirt")}
+            >
+              <Basket3 size='20' />
+              <span>Add to cart</span>
+            </button>
           </ProductWrapper>
           <ProductWrapper>
             <div className='products__wrapper'>
-              <ProductImage imgSrc={momBlackJeans2} imgAlt='Mom black jeans' />
+              <Link to='/products/momBlackJeans'>
+                <ProductImage
+                  imgSrc={momBlackJeans2}
+                  imgAlt='Mom black jeans'
+                />
+              </Link>
               <button
                 className='products__button'
                 onClick={() => addCart("momBlackJeans")}
               >
-                <ion-icon name='basket-outline'></ion-icon>Add to cart
+                <Basket3 size='20' />
+                <span>Add to cart</span>
               </button>
             </div>
           </ProductWrapper>
           <ProductWrapper>
             <div className='products__wrapper'>
-              <ProductImage
-                imgSrc={whiteSweater}
-                imgAlt='model in white sweater'
-              />
+              <Link to='/products/whiteSweater'>
+                <ProductImage
+                  imgSrc={whiteSweater}
+                  imgAlt='model in white sweater'
+                />
+              </Link>
               <button
                 className='products__button'
                 onClick={() => addCart("whiteSweater")}
               >
-                <ion-icon name='basket-outline'></ion-icon>Add to cart
+                <Basket3 size='20' />
+                <span>Add to cart</span>
               </button>
             </div>
           </ProductWrapper>
