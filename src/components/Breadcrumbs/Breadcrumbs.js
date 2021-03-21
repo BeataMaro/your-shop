@@ -1,5 +1,6 @@
 import React from "react";
 import "./Breadcrumbs.scss";
+import { ChevronLeft } from "@styled-icons/feather/ChevronLeft";
 
 export const Breadcrumbs = () => {
   return (
@@ -10,13 +11,14 @@ export const Breadcrumbs = () => {
         </li>
         <li>
           <a href='#'>
-            <ion-icon name='chevron-back-outline'></ion-icon>
+            <ChevronLeft size='20' />
             Jackets
           </a>
         </li>
         <li>
           <a href='#'>
-            <ion-icon name='chevron-back-outline'></ion-icon>Sale 50%
+            <ChevronLeft size='20' />
+            Sale 50%
           </a>
         </li>
       </ul>

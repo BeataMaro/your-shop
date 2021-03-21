@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { User, Heart, ShoppingCart } from "@styled-icons/feather/";
 
 //Redux
 import { connect } from "react-redux";
@@ -21,23 +22,26 @@ const Header = ({ cartProps }) => {
           </h1>
         </NavLink>
         <ul className='App-header__menu'>
-          <li className='App-header__menu--account'>
-            <NavLink to='/account'>
-              <ion-icon name='person-outline'></ion-icon>
-              Account
-            </NavLink>
-          </li>
+          <NavLink to='/account'>
+            <li className='App-header__menu--account'>
+              <User size='30' />
+              <span>Account</span>
+            </li>
+          </NavLink>
           <li className='App-header__menu--favourites'>
             <a href='#'>
-              <ion-icon name='heart-half-outline'></ion-icon>Favourites
+              <Heart size='30' />
+              <span>Favorites</span>
             </a>
           </li>
-          <li className='App-header__menu--cart'>
-            <NavLink to='/cart'>
-              <ion-icon name='basket-outline'></ion-icon>
-              Cart ({cartProps.cartNumbers}) {cartProps.productName}
-            </NavLink>
-          </li>
+          <NavLink to='/cart'>
+            <li className='App-header__menu--cart'>
+              <ShoppingCart size='30' />
+              <span>
+                Cart ({cartProps.cartNumbers}) {cartProps.productName}
+              </span>
+            </li>
+          </NavLink>
         </ul>
       </nav>
     </header>

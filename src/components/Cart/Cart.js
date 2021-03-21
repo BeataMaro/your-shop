@@ -1,14 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
-
-const cartStyles = {
-  padding: "2rem",
-  backgroundColor: "white",
-};
+import StyledCart from "./StyledCart";
 
 const Cart = ({ cartProps }) => {
-  console.log(cartProps);
-  return <div style={cartStyles}>I am a cart</div>;
+  const { products, cartNumbers, cartCost } = cartProps;
+  console.log(products);
+  return (
+    <StyledCart>
+      <h2>Cart</h2>
+      <div>All products: {cartNumbers}</div>
+      <div>Total: {cartCost}$</div>
+    </StyledCart>
+  );
 };
 
 const mapStateToProps = (state) => ({

@@ -15,13 +15,16 @@ $gold: #a0a000;
 .App {
   text-align: center;
   color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: $white;
 
   &-header {
     background: url(./assets/images/atikh-bana-_KaMTEmJnxY-unsplash.jpg) 50% 20% /
         contain round,
       rgb(200, 200, 200);
-    // background-image: url(./assets/images/averie-woodard-4nulm-JUYFo-unsplash.jpg);
-    // background-position: 50% 30%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 60vh;
@@ -44,6 +47,13 @@ $gold: #a0a000;
       z-index: 1;
     }
 
+    &__nav {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      justify-content: space-between;
+    }
+
     &__title {
       color: $white;
       background: $black;
@@ -54,7 +64,6 @@ $gold: #a0a000;
       //logo dot
       & span {
         color: orangered;
-        margin: 0 0.05em;
       }
       //logo
       & h1 {
@@ -66,17 +75,11 @@ $gold: #a0a000;
       }
     }
 
-    &__nav {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 2rem;
-      justify-content: space-between;
-    }
-
     &__menu {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
+      justify-content: center;
       z-index: 2;
 
       & li {
@@ -86,7 +89,6 @@ $gold: #a0a000;
 
         @media (min-width: 768px) {
           margin-right: 1rem;
-          margin-top: 0;
         }
 
         &:hover {
@@ -98,17 +100,8 @@ $gold: #a0a000;
       &--cart,
       &--favourites,
       &--account {
-        transition: 0.1s ease;
-        & ion-icon {
-          padding: 0.2em;
-          vertical-align: bottom;
-          background-color: #e1e6e6;
-          border-radius: 50%;
-          z-index: 100;
-          transition: 0.1s ease;
-        }
-        &:hover ion-icon {
-          background: $primary;
+        & span {
+          margin-left: 2px;
         }
       }
       @media (min-width: 768px) {
@@ -117,4 +110,8 @@ $gold: #a0a000;
       }
     }
   }
+}
+
+.switch-wrapper {
+  position: relative;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./DiscountBar.scss";
+import { Ship } from "@styled-icons/boxicons-solid/Ship";
 
 export const DiscountBar = () => {
   return (
@@ -11,7 +12,8 @@ export const DiscountBar = () => {
       <p>
         Free delivery with code:
         <span className='discount-bar__code'>
-          FREE-SHIP <ion-icon name='boat-outline'></ion-icon>
+          FREE-SHIPPING
+          <Ship size='30' />
         </span>
       </p>
     </div>

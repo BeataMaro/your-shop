@@ -17,7 +17,7 @@ body {
 
 }
 ::selection {
-  background: ${({ theme }) => theme.colors.gold} ;
+  background-color: ${({ theme }) => theme.colors.gold} ;
 }
 
 ul li {
