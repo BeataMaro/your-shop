@@ -16,7 +16,7 @@ const StyledNavbar = styled.nav`
 
   .nav-item {
     flex-basis: 100%;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1rem;
@@ -28,7 +28,6 @@ const StyledNavbar = styled.nav`
       box-shadow: ${({ theme }) => theme.shadows.boxShadowHover};
       color: ${({ theme }) => theme.colors.gold};
       border-bottom: none;
-      transform: scale(1.05);
     }
   }
 `;

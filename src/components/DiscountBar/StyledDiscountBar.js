@@ -37,7 +37,7 @@ const StyledDiscountBar = styled.aside`
   }
 
   & p {
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.lightgrey};
   }
   .code {
     color: orangered;

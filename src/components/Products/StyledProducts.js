@@ -1,33 +1,16 @@
-import React from "react";
 import styled from "styled-components";
 
-//WRAPPER COMPONENT
-
-const StyledWrapper = styled.section`
-  margin: 1rem 0 1rem 0;
-  padding: 1rem;
+export const ProductsWrapper = styled.div`
+  margin: 2em auto 3em;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
 `;
 
-export const Wrapper = ({ children }) => {
-  return <StyledWrapper>{children}</StyledWrapper>;
-};
-
-//PRODUCT'S IMAGE COMPONENT
-
-const StyledProductImage = styled.img`
-  transition: ${({ theme }) => theme.transitions.quick};
-
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-
-export const ProductImage = ({ imgAlt, imgSrc }) => {
-  return <StyledProductImage src={imgSrc} alt={imgAlt} />;
-};
-//PRODUCT WRAPPER COMPONENT
-
-const StyledProductWrapper = styled.div`
+export const StyledProduct = styled.div`
   background-color: ${({ theme }) => theme.colors.greyBlue};
   position: relative;
   overflow: hidden;
@@ -36,7 +19,7 @@ const StyledProductWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
   &:hover {
-    .products__button {
+    button {
       opacity: 1;
     }
   }
@@ -47,8 +30,43 @@ const StyledProductWrapper = styled.div`
   @media (min-width: 1200px) {
     width: 33.3%;
   }
-`;
 
-export const ProductWrapper = ({ children }) => {
-  return <StyledProductWrapper>{children}</StyledProductWrapper>;
-};
+  & img {
+    transition: ${({ theme }) => theme.transitions.quick};
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  & button {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    color: ${({ theme }) => theme.colors.grey};
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    border: none;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    & span {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+    &:focus {
+      outline: 0.1px solid grey;
+      outline-offset: -5px;
+    }
+    &:active {
+      color: white;
+    }
+  }
+`;

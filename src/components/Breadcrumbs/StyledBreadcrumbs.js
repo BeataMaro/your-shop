@@ -8,10 +8,10 @@ const StyledBreadcrumbs = styled.ul`
   & li a {
     color: ${({ theme }) => theme.colors.lightgrey};
     margin-right: 0.5rem;
-    transition: all 0.4s ease-in;
+    transition: all 0.2s ease-in;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.lightgrey};
+      color: ${({ theme }) => theme.colors.grey};
     }
   }
 `;
