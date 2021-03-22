@@ -1,9 +1,9 @@
 import React from "react";
-import "./Footer.scss";
+import StyledFooter from "./StyledFooter";
 
 const Footer = () => {
   return (
-    <footer className='footer'>
+    <StyledFooter>
       &copy; Copyrights 2021
       <div>
         Icons made by{" "}
@@ -19,12 +19,12 @@ const Footer = () => {
           href='https://www.flaticon.com/'
           target='_blank'
           title='Flaticon'
-          className='footer__link'
+          className='link'
         >
           www.flaticon.com
         </a>
       </div>
-    </footer>
+    </StyledFooter>
   );
 };
 

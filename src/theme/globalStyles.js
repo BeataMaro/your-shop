@@ -16,6 +16,22 @@ body {
   font-size: ${({ theme }) => theme.fonts.fsNormal};
 
 }
+
+.App {
+  text-align: center;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.switch-wrapper {
+  position: relative;
+}
+
+
 ::selection {
   background-color: ${({ theme }) => theme.colors.gold} ;
 }

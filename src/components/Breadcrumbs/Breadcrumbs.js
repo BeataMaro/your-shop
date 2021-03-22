@@ -1,24 +1,8 @@
 import React from "react";
 import { ChevronLeft } from "@styled-icons/feather/ChevronLeft";
-import styled from "styled-components";
+import StyledBreadcrumbs from "./StyledBreadcrumbs";
 
-const StyledBreadcrumbs = styled.ul`
-  display: flex;
-  padding: 2rem;
-  border-top: 0.03px solid ${({ theme }) => theme.colors.greyblue};
-
-  & li a {
-    color: ${({ theme }) => theme.colors.lightgrey};
-    margin-right: 0.5rem;
-    transition: all 0.4s ease-in;
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.lightgrey};
-    }
-  }
-`;
-
-const Breadcrumbs = ({ theme }) => {
+const Breadcrumbs = () => {
   return (
     <StyledBreadcrumbs>
       <li>

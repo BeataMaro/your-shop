@@ -29,4 +29,4 @@ const Cart = ({ children }) => {
   return <StyledCart>{children}</StyledCart>;
 };
 
-export default Cart;
+export default StyledCart;

@@ -11,7 +11,7 @@ import { DiscountBar } from "./components/DiscountBar";
 import { Header } from "./components/Header";
 import { NavBar } from "./components/NavBar";
 // import { Home } from "./components/Home";
-import { Products } from "./components/Products";
+import { Products2 } from "./components/Products2";
 import { ProductDetails } from "./components/ProductDetails";
 import { Cart } from "./components/Cart";
 import { Account } from "./components/Account";
@@ -31,7 +31,7 @@ function App() {
             atActive={{ opacity: 1 }}
             className='switch-wrapper'
           >
-            <Route exact path='/products' component={Products} />
+            <Route exact path='/products' component={Products2} />
             <Route path='/products/:id' component={ProductDetails} />
             <Route path='/account' component={Account} />
             <Route path='/cart'>
