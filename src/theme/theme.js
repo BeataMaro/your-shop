@@ -2,9 +2,18 @@ export default {
   colors: {
     main: "#347474f",
     dark: "#263238",
-    light: "#546e7a",
-    greyBlue: "#c8dcdc",
+    grey: "#546e7a",
+    lightgrey: "#a5aaaf",
+    greyblue: "#c8dcdc",
     gold: "#a0a000",
+    white: "#e1e6e6",
+    darkviolet: "#2d2d46",
+    mint: "#C8FFFF",
+  },
+
+  shadows: {
+    boxShadow: "1px 3px 12px rgba(0, 0, 0, 0.08)",
+    boxShadowHover: "1px 3px 15px rgba(0, 0, 0, 0.2)",
   },
 
   fonts: {

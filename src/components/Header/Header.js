@@ -1,41 +1,123 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { User, Heart, ShoppingCart } from "@styled-icons/feather/";
+import styled from "styled-components";
 
 //Redux
 import { connect } from "react-redux";
 import { getNumbers } from "../../actions/getAction";
 
-const Header = ({ cartProps }) => {
+const StyledHeader = styled.header`
+  background: url("https://images.unsplash.com/photo-1595886395651-50524312a9bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+    50% 20% / contain round rgb(200, 200, 200);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  box-shadow: ${({ theme }) => theme.shadows.boxShadow};
+
+  @media (min-width: 768px) {
+    height: 45vh;
+    background-repeat: repeat;
+    background-size: contain;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  & nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  .logo {
+    color: white;
+    background: black;
+    align-self: flex-start;
+    padding: 0.2em 0.6em;
+    z-index: 200;
+
+    & span {
+      color: orangered;
+    }
+
+    & h1 {
+      font-size: 3rem;
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+    }
+  }
+  & ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+
+    & li {
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      & span {
+        margin-left: 2px;
+      }
+
+      @media (min-width: 768px) {
+        margin-right: 1rem;
+      }
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-self: flex-start;
+    }
+  }
+`;
+
+const Header = ({ theme, cartProps }) => {
   console.log(cartProps);
 
   useEffect(() => {
     getNumbers();
   }, []);
   return (
-    <header className='App-header'>
-      <div className='App-header__overlay'></div>
-      <nav className='App-header__nav'>
-        <NavLink to='/' className='App-header__title'>
+    <StyledHeader>
+      <div className='overlay'></div>
+      <nav>
+        <NavLink to='/' className='logo'>
           <h1>
             YOUR<span>.</span>Shop
           </h1>
         </NavLink>
-        <ul className='App-header__menu'>
+        <ul>
           <NavLink to='/account'>
-            <li className='App-header__menu--account'>
+            <li>
               <User size='30' />
               <span>Account</span>
             </li>
           </NavLink>
-          <li className='App-header__menu--favourites'>
+          <li>
             <a href='#'>
               <Heart size='30' />
               <span>Favorites</span>
             </a>
           </li>
           <NavLink to='/cart'>
-            <li className='App-header__menu--cart'>
+            <li>
               <ShoppingCart size='30' />
               <span>
                 Cart ({cartProps.cartNumbers}) {cartProps.productName}
@@ -44,7 +126,7 @@ const Header = ({ cartProps }) => {
           </NavLink>
         </ul>
       </nav>
-    </header>
+    </StyledHeader>
   );
 };
 

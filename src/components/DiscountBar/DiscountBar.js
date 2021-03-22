@@ -1,22 +1,81 @@
 import React from "react";
-import "./DiscountBar.scss";
 import { Ship } from "@styled-icons/boxicons-solid/Ship";
+import styled, { keyframes } from "styled-components";
 
-export const DiscountBar = () => {
+const blink = keyframes`
+  0% {
+    color: #8fbe6f;
+    text-shadow: -1px -1px 5px #8fbe6f;
+  }
+
+  50% {
+    color: royalblue;
+    text-shadow: -1px -1px 5px royalblue;
+  }
+
+  100% {
+    color: orangered;
+    text-shadow: -1px -1px 5px orangered;
+  }
+
+`;
+
+const StyledDiscountBar = styled.aside`
+  display: flex;
+  justify-content: space-between;
+  color: ${({ theme }) => theme.colors.lightgrey};
+  background-color: ${({ theme }) => theme.colors.darkviolet};
+  padding: 1em;
+  font-weight: 500;
+
+  .sale {
+    animation: ${blink} 1.3s infinite alternate ease-out;
+    letter-spacing: 1px;
+    align-self: center;
+
+    & span {
+      margin-left: 6px;
+    }
+  }
+  .code {
+    color: orangered;
+    padding: 0.4rem;
+    font-weight: 700;
+    display: block;
+    text-align: right;
+
+    @media (min-width: 768px) {
+      margin-left: 1rem;
+      display: inline-block;
+    }
+
+    & svg {
+      color: ${({ theme }) => theme.colors.lightgrey};
+      vertical-align: bottom;
+      margin-left: 10px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-around;
+  }
+`;
+
+export const DiscountBar = ({ theme }) => {
   return (
-    <div className='discount-bar'>
-      <a href='/' className='discount-bar__sale'>
+    <StyledDiscountBar>
+      <a href='/' className='sale'>
         <ion-icon name='pricetags-outline'></ion-icon>
-        Sale -50%
+        <span>Sale -50%</span>
       </a>
       <p>
         Free delivery with code:
-        <span className='discount-bar__code'>
+        <span className='code'>
           FREE-SHIPPING
           <Ship size='30' />
         </span>
       </p>
-    </div>
+    </StyledDiscountBar>
   );
 };
 

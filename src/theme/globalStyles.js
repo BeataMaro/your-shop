@@ -34,9 +34,10 @@ img {
 }
 
 ion-icon {
-  margin-right: 0.5rem;
   font-size: 2rem;
-  color: $primary;
-}`;
+
+}
+
+`;
 
 export default GlobalStyle;

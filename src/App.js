@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Provider } from "react-redux";
 import store from "./store";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 
 //components
@@ -10,7 +10,7 @@ import { AnimatedSwitch } from "react-router-transition";
 import { DiscountBar } from "./components/DiscountBar";
 import { Header } from "./components/Header";
 import { NavBar } from "./components/NavBar";
-import { Home } from "./components/Home";
+// import { Home } from "./components/Home";
 import { Products } from "./components/Products";
 import { ProductDetails } from "./components/ProductDetails";
 import { Cart } from "./components/Cart";
