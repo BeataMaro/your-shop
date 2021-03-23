@@ -68,6 +68,7 @@ ion-icon {
   background-color: rgba(0,0,0,.1);
   transform: scale(.7);
   opacity: .7;
+
 }
 `;
 

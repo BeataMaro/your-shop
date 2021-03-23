@@ -33,6 +33,7 @@ const StyledDiscountBar = styled.aside`
 
     & span {
       margin-left: 6px;
+      font-size: 2rem;
     }
   }
 
