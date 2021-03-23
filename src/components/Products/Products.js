@@ -15,7 +15,7 @@ import skirt from "../../assets/products/skirt.jpg";
 import momBlackJeans2 from "../../assets/products/mom-black-jeans2.jpg";
 import whiteSweater from "../../assets/products/white-sweater.jpg";
 
-export const Products2 = ({ addCart }) => {
+export const Products = ({ addCart }) => {
   return (
     <>
       <Breadcrumbs />
@@ -53,4 +53,4 @@ export const Products2 = ({ addCart }) => {
   );
 };
 
-export default connect(null, { addCart })(Products2);
+export default connect(null, { addCart })(Products);

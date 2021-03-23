@@ -30,7 +30,7 @@ const Header = ({ cartProps }) => {
             </li>
           </NavLink>
           <li>
-            <a href='#'>
+            <a href='/favorites'>
               <Heart size='30' />
               <span>Favorites</span>
             </a>

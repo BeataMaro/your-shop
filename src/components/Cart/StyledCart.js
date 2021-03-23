@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledCart = styled.div`
@@ -24,9 +23,5 @@ const StyledCart = styled.div`
     width: 50%;
   }
 `;
-
-const Cart = ({ children }) => {
-  return <StyledCart>{children}</StyledCart>;
-};
 
 export default StyledCart;

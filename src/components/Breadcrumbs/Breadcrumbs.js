@@ -6,16 +6,16 @@ const Breadcrumbs = () => {
   return (
     <StyledBreadcrumbs>
       <li>
-        <a href='#'>Home</a>
+        <a href='/'>Home</a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/products'>
           <ChevronLeft size='20' />
           Jackets
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/products'>
           <ChevronLeft size='20' />
           Sale 50%
         </a>
