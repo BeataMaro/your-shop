@@ -10,6 +10,7 @@ const Footer = () => {
         <a
           href='https://www.flaticon.com/authors/vectors-market'
           target='_blank'
+          rel='noopener noreferrer'
           title='Vectors Market'
         >
           Vectors Market
@@ -18,6 +19,7 @@ const Footer = () => {
         <a
           href='https://www.flaticon.com/'
           target='_blank'
+          rel='noopener noreferrer'
           title='Flaticon'
           className='link'
         >
