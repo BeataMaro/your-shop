@@ -54,6 +54,12 @@ ion-icon {
 
 }
 
+.line {
+  width: 50%;
+  border-bottom: 1px solid teal;
+  transition: .3s ease-in;
+  margin: auto;
+}
 `;
 
 export default GlobalStyle;

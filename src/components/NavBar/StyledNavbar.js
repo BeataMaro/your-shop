@@ -1,33 +1,69 @@
 import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
-  color: ${({ theme }) => theme.colors.lightgrey};
-  background-color: #ebf0f5;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: ${({ theme }) => theme.colors.lightgrey};
+    background-color: #ebf0f5;
+    width: 90%;
+    margin: auto;
 
-  @media (min-width: 768px) {
-    width: 50%;
-    border-bottom: none;
-    flex-direction: row;
-  }
+    .nav-item {
+      flex-basis: 100%;
+      display: grid;
+      place-items: center;
+      margin: 1em 0 1em;
+      min-height: 400px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-top: 1rem;
+      box-shadow: ${({ theme }) => theme.shadows.boxShadow};
+      overflow: hidden;
+      cursor: pointer;
+      transition: ${({ theme }) => theme.transitions.quick};
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        .link::after {
+          width: 100%;
+        }
+      }
 
-  .nav-item {
-    flex-basis: 100%;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1rem;
-    box-shadow: ${({ theme }) => theme.shadows.boxShadow};
-    cursor: pointer;
-    transition: all 0.2s ease-in;
+      .link {
+        color: teal;
+        display: inline-block;
+        overflow: hidden;
 
-    &:hover {
-      box-shadow: ${({ theme }) => theme.shadows.boxShadowHover};
-      color: ${({ theme }) => theme.colors.gold};
-      border-bottom: none;
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 1px;
+          background-color: teal;
+          transition: width 0.3s;
+        }
+      }
+
+      img {
+        margin-top: 2em;
+        max-width: 100%;
+        height: 400px;
+        transition: ${({ theme }) => theme.transitions.quick};
+      }
+
+      &:hover {
+        box-shadow: ${({ theme }) => theme.shadows.boxShadowHover};
+        color: ${({ theme }) => theme.colors.gold};
+      }
+    }
+    @media (min-width: 986px) {
+      width: 70%;
+      flex-direction: row;
     }
   }
 `;
