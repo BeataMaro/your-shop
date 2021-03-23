@@ -9,6 +9,7 @@ export default {
     white: "#e1e6e6",
     darkviolet: "#2d2d46",
     mint: "#C8FFFF",
+    red: "tomato",
   },
 
   shadows: {

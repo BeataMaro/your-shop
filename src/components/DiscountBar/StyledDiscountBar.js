@@ -2,18 +2,18 @@ import styled, { keyframes } from "styled-components";
 
 const blink = keyframes`
   0% {
-    color: #8fbe6f;
-    text-shadow: -1px -1px 5px #8fbe6f;
+    color: ${({ theme }) => theme.colors.greyblue};
+    text-shadow: -1px -1px 2px ${({ theme }) => theme.colors.greyblue};
   }
 
   50% {
-    color: royalblue;
-    text-shadow: -1px -1px 5px royalblue;
+    color: violet;
+    text-shadow: -1px -1px 2px violet;
   }
 
   100% {
-    color: orangered;
-    text-shadow: -1px -1px 5px orangered;
+    color: teal;
+    text-shadow: -1px -1px 6px teal;
   }
 
 `;
@@ -40,7 +40,7 @@ const StyledDiscountBar = styled.aside`
     color: ${({ theme }) => theme.colors.lightgrey};
   }
   .code {
-    color: orangered;
+    color: ${({ theme }) => theme.colors.gold};
     padding: 0.4rem;
     font-weight: 700;
     display: block;

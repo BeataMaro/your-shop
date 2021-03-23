@@ -21,10 +21,13 @@ const StyledHeader = styled.header`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  & nav {
+  /* & nav {
+    position: fixed;
+    width: 100%;
+    top: 8vh;
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
@@ -79,7 +82,7 @@ const StyledHeader = styled.header`
       flex-direction: row;
       align-self: flex-start;
     }
-  }
+  } */
 `;
 
 export default StyledHeader;

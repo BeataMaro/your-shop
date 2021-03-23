@@ -7,11 +7,12 @@ const StyledNavbar = styled.nav`
     justify-content: center;
     align-items: center;
     color: ${({ theme }) => theme.colors.lightgrey};
-    background-color: #ebf0f5;
+    background-color: ${({ theme }) => theme.colors.greyblue};
     width: 90%;
     margin: auto;
 
     .nav-item {
+      background-color: ${({ theme }) => theme.colors.white};
       flex-basis: 100%;
       display: grid;
       place-items: center;

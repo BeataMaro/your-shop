@@ -60,6 +60,15 @@ ion-icon {
   transition: .3s ease-in;
   margin: auto;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,.1);
+  transform: scale(.7);
+  opacity: .7;
+}
 `;
 
 export default GlobalStyle;
