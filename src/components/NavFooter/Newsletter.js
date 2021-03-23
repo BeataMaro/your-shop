@@ -5,7 +5,7 @@ import { Envelope } from "@styled-icons/bootstrap/Envelope";
 const StyledNewsletter = styled.form`
   background-color: ${({ theme }) => theme.colors.white};
   grid-column: 1/-1;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;

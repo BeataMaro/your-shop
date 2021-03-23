@@ -66,8 +66,12 @@ ion-icon {
   top: 0;
   width: 100%;
   background-color: rgba(0,0,0,.1);
-  transform: scale(.7);
+  transform: scale(.9);
   opacity: .7;
+
+  @media (min-width: 768px) {
+  transform: scale(.8);
+  }
 
 }
 `;

@@ -14,6 +14,7 @@ import { Products } from "./components/Products";
 import { ProductDetails } from "./components/ProductDetails";
 import { Cart } from "./components/Cart";
 import { Account } from "./components/Account";
+import { AsideSocialMedia } from "./components/AsideSocialMedia";
 import { NavFooter } from "./components/NavFooter";
 import { Footer } from "./components/Footer";
 
@@ -44,6 +45,7 @@ function App() {
           {/* <Home /> */}
           {/* <Products /> */}
         </Router>
+        <AsideSocialMedia />
         <NavFooter />
         <Footer />
       </div>

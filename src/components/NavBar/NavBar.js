@@ -12,9 +12,14 @@ export const NavBar = () => {
             <Female size='30' />
             <span className='link'>Women</span>
             <img
-              src='https://images.unsplash.com/photo-1582533552406-234434284c17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80'
+              src='https://images.unsplash.com/photo-1516575334481-f85287c2c82d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80'
               alt=''
             />
+
+            {/* <img
+              src='https://images.unsplash.com/photo-1582533552406-234434284c17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80'
+              alt=''
+            /> */}
           </Link>
         </li>
         <li>
@@ -22,7 +27,7 @@ export const NavBar = () => {
             <Male size='30' />
             <span className='link'>Men</span>
             <img
-              src='https://images.unsplash.com/photo-1582533552406-234434284c17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80'
+              src='https://images.unsplash.com/photo-1530735038726-a73fd6e6a349?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
               alt=''
             />
           </Link>

@@ -5,10 +5,12 @@ import { SocialMedia } from "../SocialMedia";
 
 const NavFooter = () => {
   return (
-    <StyledNavFooter>
-      <SocialMedia footer></SocialMedia>
-      <Newsletter />
-    </StyledNavFooter>
+    <>
+      <StyledNavFooter>
+        <SocialMedia />
+        <Newsletter />
+      </StyledNavFooter>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { User, Heart, ShoppingCart } from "@styled-icons/feather/";
 import StyledNavMenu from "./StyledNavMenu";
@@ -13,7 +13,7 @@ const NavMenu = ({ cartProps }) => {
     const sticky = hero.getBoundingClientRect();
 
     const scrollCallBack = window.addEventListener("scroll", () => {
-      window.pageYOffset > sticky.height
+      window.pageYOffset > sticky.height / 2
         ? menu.classList.add("sticky")
         : menu.classList.remove("sticky");
     });

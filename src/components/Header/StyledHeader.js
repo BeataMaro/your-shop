@@ -24,65 +24,6 @@ const StyledHeader = styled.header`
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  /* & nav {
-    position: fixed;
-    width: 100%;
-    top: 8vh;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    justify-content: space-between;
-  }
-  .logo {
-    color: white;
-    background: black;
-    align-self: flex-start;
-    padding: 0.2em 0.6em;
-    z-index: 200;
-
-    & span {
-      color: orangered;
-    }
-
-    & h1 {
-      font-size: 3rem;
-
-      @media (min-width: 768px) {
-        font-size: 4rem;
-      }
-    }
-  }
-  & ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    z-index: 2;
-
-    & li {
-      margin-top: 1rem;
-      transition: all 0.3s ease;
-      color: ${({ theme }) => theme.colors.grey};
-      cursor: pointer;
-
-      & span {
-        margin-left: 2px;
-      }
-
-      @media (min-width: 768px) {
-        margin-right: 1rem;
-      }
-
-      &:hover {
-        color: ${({ theme }) => theme.colors.white};
-        cursor: pointer;
-      }
-    }
-    @media (min-width: 768px) {
-      flex-direction: row;
-      align-self: flex-start;
-    }
-  } */
 `;
 
 export default StyledHeader;

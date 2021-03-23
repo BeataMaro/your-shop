@@ -4,7 +4,7 @@ const StyledNavbar = styled.nav`
   & ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: ${({ theme }) => theme.colors.lightgrey};
     background-color: ${({ theme }) => theme.colors.greyblue};
@@ -13,7 +13,7 @@ const StyledNavbar = styled.nav`
 
     .nav-item {
       background-color: ${({ theme }) => theme.colors.white};
-      flex-basis: 100%;
+      /* flex-basis: 100%; */
       display: grid;
       place-items: center;
       margin: 1em 0 1em;
@@ -62,8 +62,8 @@ const StyledNavbar = styled.nav`
         color: ${({ theme }) => theme.colors.gold};
       }
     }
-    @media (min-width: 986px) {
-      width: 70%;
+    @media (min-width: 768px) {
+      width: 80%;
       flex-direction: row;
     }
   }

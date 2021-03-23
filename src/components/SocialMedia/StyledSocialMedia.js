@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const StyledSocialMedia = styled.div`
-  background-color: ${(props) => (props.footer ? "black" : "pink")};
+export const StyledSocialMedia = styled.div`
+  background-color: black;
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
@@ -18,5 +18,3 @@ const StyledSocialMedia = styled.div`
     grid-column: 1/3;
   }
 `;
-
-export default StyledSocialMedia;
