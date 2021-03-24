@@ -1,12 +1,13 @@
 import React from "react";
 import { Ship } from "@styled-icons/boxicons-solid/Ship";
+import { PriceTag } from "@styled-icons/entypo/PriceTag";
 import StyledDiscountBar from "./StyledDiscountBar";
 
 export const DiscountBar = () => {
   return (
     <StyledDiscountBar>
       <a href='/' className='sale'>
-        <ion-icon name='pricetags-outline'></ion-icon>
+        <PriceTag size='30' />
         <span>Sale -50%</span>
       </a>
       <p>

@@ -17,15 +17,16 @@ import { Account } from "./components/Account";
 import { AsideSocialMedia } from "./components/AsideSocialMedia";
 import { NavFooter } from "./components/NavFooter";
 import { Footer } from "./components/Footer";
+import Main from "./components/Main/";
 
 function App() {
   return (
     <Provider store={store}>
       <div className='App'>
+        <Main />
         <Router>
           <DiscountBar />
           <Header />
-          <NavBar />
           <AnimatedSwitch
             atEnter={{ opacity: 0 }}
             atLeave={{ opacity: 0 }}
@@ -38,11 +39,11 @@ function App() {
             <Route path='/cart'>
               <Cart />
             </Route>
+            <NavBar />
           </AnimatedSwitch>
 
           {/* <Route exact path='/' component={Home} /> */}
 
-          {/* <Home /> */}
           {/* <Products /> */}
         </Router>
         <AsideSocialMedia />

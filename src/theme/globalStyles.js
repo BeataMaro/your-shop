@@ -49,11 +49,6 @@ img {
   max-width: 100%;
 }
 
-ion-icon {
-  font-size: 2rem;
-
-}
-
 .line {
   width: 50%;
   border-bottom: 1px solid teal;
