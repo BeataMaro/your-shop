@@ -1,29 +1,30 @@
 import React from "react";
 import { Female, Male } from "@styled-icons/ionicons-outline";
 import { Link } from "react-router-dom";
-import StyledNavbar from "./StyledNavbar";
+import {
+  StyledNavbar,
+  StyledAsideNavBar,
+  StyledAsideImage,
+} from "./StyledNavbar";
 
-export const NavBar = () => {
-  return (
+export const NavBar = ({ aside }) => {
+  const small = aside === true;
+
+  return !small ? (
     <StyledNavbar>
       <ul>
         <li>
-          <Link to='/products' className='nav-item'>
+          <Link to='/products/women' className='nav-item'>
             <Female size='30' />
             <span className='link'>Women</span>
             <img
               src='https://images.unsplash.com/photo-1516575334481-f85287c2c82d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80'
               alt=''
             />
-
-            {/* <img
-              src='https://images.unsplash.com/photo-1582533552406-234434284c17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80'
-              alt=''
-            /> */}
           </Link>
         </li>
         <li>
-          <Link to='/products' className='nav-item'>
+          <Link to='/products/men' className='nav-item'>
             <Male size='30' />
             <span className='link'>Men</span>
             <img
@@ -34,6 +35,30 @@ export const NavBar = () => {
         </li>
       </ul>
     </StyledNavbar>
+  ) : (
+    <StyledAsideNavBar aside={aside}>
+      <StyledAsideImage gender='women'>
+        <Link to='/products/women'>
+          <div className='image'>
+            <div className='title'>
+              <Male size='30' />
+              <span className='link'>Women</span>
+            </div>
+          </div>
+        </Link>
+      </StyledAsideImage>
+
+      <StyledAsideImage gender='men'>
+        <Link to='/products/men'>
+          <div className='image'>
+            <div className='title'>
+              <Female size='30' />
+              <span className='link'>Men</span>
+            </div>
+          </div>
+        </Link>
+      </StyledAsideImage>
+    </StyledAsideNavBar>
   );
 };
 

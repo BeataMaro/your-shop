@@ -33,7 +33,11 @@ const StyledDiscountBar = styled.aside`
 
     & span {
       margin-left: 6px;
-      font-size: 2rem;
+      font-size: 1.7rem;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
     }
   }
 

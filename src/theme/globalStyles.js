@@ -60,12 +60,25 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(0,0,0,.2);
   transform: scale(.9);
   opacity: .7;
-
+  
   @media (min-width: 768px) {
-  transform: scale(.8);
+    transform: scale(.8);
+  }
+  
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0,0,0,.6);
+  }
+
+   & .menu-item {
+     color: ${({ theme }) => theme.colors.white};
+   }
+
+  & .menu-item:hover {
+      color: violet;
   }
 
 }

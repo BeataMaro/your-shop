@@ -36,19 +36,19 @@ const NavMenu = ({ cartProps }) => {
         </NavLink>
         <ul>
           <li>
-            <NavLink to='/account' role='menuitem'>
+            <NavLink to='/account' role='menuitem' className='menu-item'>
               <User size='30' />
               <span>Account</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to='/favorites' role='menuitem'>
+            <NavLink to='/favorites' role='menuitem' className='menu-item'>
               <Heart size='30' />
               <span>Favorites</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to='/cart' role='menuitem'>
+            <NavLink to='/cart' role='menuitem' className='menu-item'>
               <ShoppingCart size='30' />
               <span>
                 Cart ({cartProps.cartNumbers}) {cartProps.productName}

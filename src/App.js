@@ -33,7 +33,8 @@ function App() {
             atActive={{ opacity: 1 }}
             className='switch-wrapper'
           >
-            <Route exact path='/products' component={Products} />
+            <Route exact path='/products/women' component={Products} />
+            <Route exact path='/products/men' component={Products} />
             <Route path='/products/:id' component={ProductDetails} />
             <Route path='/account' component={Account} />
             <Route path='/cart'>

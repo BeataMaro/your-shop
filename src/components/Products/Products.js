@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Basket3 } from "@styled-icons/bootstrap/Basket3";
 import { Breadcrumbs } from "../Breadcrumbs";
+import { NavBar } from "../NavBar";
 
 //Redux
 import { connect } from "react-redux";
@@ -19,7 +20,7 @@ export const Products = ({ addCart }) => {
   return (
     <>
       <Breadcrumbs />
-
+      <NavBar aside />
       <ProductsWrapper>
         <StyledProduct>
           <Link to='/products/skirt'>

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const ProductsWrapper = styled.div`
   margin: 2em auto 3em;
-  width: 90%;
+  /* width: 90%; */
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -25,10 +26,12 @@ export const StyledProduct = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 50%;
+    /* width: 50%; */
+    width: 40%;
   }
   @media (min-width: 1200px) {
-    width: 33.3%;
+    /* width: 33.3%; */
+    width: 25%;
   }
 
   & img {
