@@ -1,33 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "../Modal";
 
-class Main extends React.Component {
-  state = {
-    isModalOpen: false,
-  };
+const Main = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
 
-  toggleState = (e) => {
-    this.setState({
-      isModalOpen: !this.state.isModalOpen,
-    });
+  const toggleState = () => {
+    setModalOpen(!isModalOpen);
   };
-
-  render() {
-    return (
-      <>
-        <button onClick={this.toggleState}>Open Modal</button>
-        {this.state.isModalOpen && (
-          <Modal
-            id='modal'
-            isOpen={this.state.isModalOpen}
-            onClose={this.toggleState}
-          >
-            <div className='box-body'>I am the content of the modal</div>
-          </Modal>
-        )}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <button onClick={toggleState}>Open Modal</button>
+      {isModalOpen && (
+        <Modal id='modal' isOpen={isModalOpen} onClose={toggleState}>
+          <div className='box-body'>I am the content of the modal</div>
+        </Modal>
+      )}
+    </>
+  );
+};
 
 export default Main;

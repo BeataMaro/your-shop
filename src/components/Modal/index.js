@@ -48,14 +48,16 @@ class Modal extends React.Component {
   };
 
   render() {
+    const { id, modalSize, modalClass, children } = this.props;
+
     return ReactDom.createPortal(
       <StyledModal
-        id={this.props.id}
-        className={`wrapper ${"size-" + this.props.modalSize} fade-${
+        id={id}
+        className={`wrapper ${"size-" + modalSize} fade-${
           this.state.fadeType
-        } ${this.props.modalClass}`}
+        } ${modalClass}`}
         role='dialog'
-        modalSize={this.props.modalSize}
+        modalSize={modalSize}
         onTransitionEnd={this.transitionEnd}
       >
         <div className='box-dialog'>
@@ -65,7 +67,7 @@ class Modal extends React.Component {
               ×
             </button>
           </div>
-          <div className='box-content'>{this.props.children}</div>
+          <div className='box-content'>{children}</div>
           <div className='box-footer'>
             <button onClick={this.handleClick} className='close'>
               Close
