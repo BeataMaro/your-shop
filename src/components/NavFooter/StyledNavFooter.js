@@ -5,6 +5,7 @@ const StyledNavFooter = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
   background-color: ${({ theme }) => theme.colors.lightgrey};
+  margin-top: 1em;
 `;
 
 export default StyledNavFooter;

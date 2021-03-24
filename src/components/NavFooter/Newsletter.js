@@ -12,6 +12,7 @@ const StyledNewsletter = styled.form`
 
   & svg {
     color: ${({ theme }) => theme.colors.lightgrey};
+    margin-right: 0.8em;
   }
 
   & label {
@@ -34,6 +35,22 @@ const StyledNewsletter = styled.form`
       border-bottom: 5px solid pink;
     }
   }
+  & button {
+    padding: 0.5em 0.8em 0.5em;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: black;
+    color: ${({ theme }) => theme.colors.white};
+    margin: 1em;
+    transition: ${({ theme }) => theme.transitions.quick};
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.greyblue};
+      color: black;
+      border: 1px solid black;
+    }
+  }
   @media (min-width: 992px) {
     grid-column: 3/-1;
   }
@@ -43,6 +60,7 @@ const Newsletter = () => {
   const inputRef = useRef(null);
   return (
     <StyledNewsletter>
+      <Envelope size='30' />
       <label>
         Newsletter
         <input
@@ -51,8 +69,10 @@ const Newsletter = () => {
           ref={inputRef}
           onMouseEnter={() => inputRef.current.focus()}
         />
-        <Envelope size='30' />
       </label>
+      <button type='submit' onClick={(e) => e.preventDefault()}>
+        Subscribe
+      </button>
     </StyledNewsletter>
   );
 };
