@@ -37,7 +37,7 @@ export const NavBar = ({ aside }) => {
     </StyledNavbar>
   ) : (
     <StyledAsideNavBar aside={aside}>
-      <input type='radio' name='half' />
+      {/* <input type='radio' name='half' /> */}
       <Link to='/products/women'>
         <StyledAsideImage gender='women' className='half'>
           <div className='image'>
@@ -49,7 +49,7 @@ export const NavBar = ({ aside }) => {
         </StyledAsideImage>
       </Link>
 
-      <input type='radio' name='half' />
+      {/* <input type='radio' name='half' /> */}
       <Link to='/products/men'>
         <StyledAsideImage gender='men' className='half'>
           <div className='title'>
