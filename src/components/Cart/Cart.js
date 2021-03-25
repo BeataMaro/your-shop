@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import StyledCart from "./StyledCart";
+import { CashStack } from "@styled-icons/bootstrap/CashStack";
 
 import { nanoid } from "nanoid";
 
@@ -28,6 +30,15 @@ const Cart = ({ cartProps }) => {
       </div>
       <div>All products: {cartNumbers}</div>
       <div>Total: {cartCost}$</div>
+      <button className='button'>
+        <CashStack size='20' />
+        <span>Buy</span>
+      </button>
+      <div>
+        <Link to='/'>
+          <span>Continue shopping</span>
+        </Link>
+      </div>
     </StyledCart>
   );
 };

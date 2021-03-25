@@ -12,11 +12,22 @@ const StyledCart = styled.div`
   & div {
     flex: 1;
     margin-top: 2rem;
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
     align-items: center;
+
+    /* border: 1px solid orange; */
+  }
+
+  & span {
+    transition: 0.2s ease;
+    color: orange;
+
+    &:hover {
+      color: violet;
+    }
   }
 
   @media (min-width: 768px) {

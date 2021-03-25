@@ -26,7 +26,7 @@ export const Products = ({ addCart }) => {
           <Link to='/products/skirt'>
             <img src={skirt} alt='skirt' />
           </Link>
-          <button onClick={() => addCart("skirt")}>
+          <button onClick={() => addCart("skirt")} className='button'>
             <Basket3 size='20' />
             <span>Add to cart</span>
           </button>
@@ -35,7 +35,7 @@ export const Products = ({ addCart }) => {
           <Link to='/products/momBlackJeans'>
             <img src={momBlackJeans2} alt='Mom black jeans' />
           </Link>
-          <button onClick={() => addCart("momBlackJeans")}>
+          <button onClick={() => addCart("momBlackJeans")} className='button'>
             <Basket3 size='20' />
             <span>Add to cart</span>
           </button>
@@ -44,7 +44,7 @@ export const Products = ({ addCart }) => {
           <Link to='/products/whiteSweater'>
             <img src={whiteSweater} alt='model in white sweater' />
           </Link>
-          <button onClick={() => addCart("whiteSweater")}>
+          <button onClick={() => addCart("whiteSweater")} className='button'>
             <Basket3 size='20' />
             <span>Add to cart</span>
           </button>

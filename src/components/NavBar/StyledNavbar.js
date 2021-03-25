@@ -72,26 +72,73 @@ export const StyledNavbar = styled.nav`
 `;
 
 export const StyledAsideNavBar = styled.div`
+  display: flex;
+  flex-direction: column;
   background-color: black;
-  width: 200px;
-  height: 200px;
+  border-radius: 15px;
+  width: 90%;
+  height: 350px;
+  margin: auto;
+  /* position: sticky; */
+  /* top: 20vh; */
+  border: 6px solid black;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 75%;
+    height: 300px;
+  }
+
+  & .title {
+    padding: 0.5rem;
+    background-color: black;
+    color: grey;
+    transition: ${({ theme }) => theme.transitions.quick};
+  }
+
+  &:hover {
+    .half {
+      transform: scale(0.8);
+    }
+  }
+
+  @media (min-width: 768px) {
+    /* max-width: 200px; */
+  }
 `;
 
 export const StyledAsideImage = styled.div`
-  max-width: 100%;
+  position: absolute;
+  left: ${({ gender }) => (gender === "women" ? 0 : "")};
+  right: ${({ gender }) => (gender === "men" ? 0 : "")};
+  width: 50%;
   height: 100%;
-  background-color: pink;
+  border-radius: 15px;
+  background-color: black;
   background-image: ${({ gender }) =>
     gender === "women" ? `url(${women})` : `url(${men})`};
+  background-position: ${({ gender }) =>
+    gender === "women" ? "center" : "right"};
   background-size: cover;
-  display: grid;
-  place-items: center;
-  .title {
-    padding: 1rem;
-    background-color: white;
-    color: ${({ gender }) => (gender === "women" ? "pink" : "red")};
-    /* position: absolute; */
-    /* top: 0; */
-    /* right: 0; */
+  background-repeat: no-repeat;
+  transition: ${({ theme }) => theme.transitions.quick};
+
+  &:hover {
+    /* & {
+      transform: scale(0.8);
+    } */
+    .title {
+      font-size: 3rem;
+      color: teal;
+      transform: ${({ gender }) =>
+        gender === "women" ? "rotate(-9deg)" : "rotate(9deg)"};
+    }
+  }
+
+  @media (min-width: 768px) {
+    background-position: ${({ gender }) =>
+      gender === "women" ? "left" : "top"};
   }
 `;
