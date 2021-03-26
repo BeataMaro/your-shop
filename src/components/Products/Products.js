@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Basket3 } from "@styled-icons/bootstrap/Basket3";
 import { Breadcrumbs } from "../Breadcrumbs";
@@ -17,10 +17,19 @@ import momBlackJeans2 from "../../assets/products/mom-black-jeans2.jpg";
 import whiteSweater from "../../assets/products/white-sweater.jpg";
 
 export const Products = ({ addCart }) => {
+  let url = window.location?.href;
+  const [locationUrl, setLocationUrl] = useState("");
+  useEffect(() => {
+    const getCurrentUrl = () => {
+      setLocationUrl(url);
+    };
+    getCurrentUrl();
+  }, [url]);
+
   return (
     <>
       <Breadcrumbs />
-      <NavBar aside />
+      <NavBar aside url={locationUrl} />
       <ProductsWrapper>
         <StyledProduct>
           <Link to='/products/skirt'>

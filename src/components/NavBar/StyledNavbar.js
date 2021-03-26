@@ -15,11 +15,11 @@ export const StyledNavbar = styled.nav`
 
     .nav-item {
       background-color: ${({ theme }) => theme.colors.white};
-      /* flex-basis: 100%; */
       display: grid;
       place-items: center;
       margin: 1em;
       min-height: 400px;
+      min-width: 300px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -71,41 +71,46 @@ export const StyledNavbar = styled.nav`
   }
 `;
 
-export const StyledAsideNavBar = styled.div`
+export const StyledAsideNavBar = styled.nav`
   display: flex;
   flex-direction: column;
-  background-color: black;
   border-radius: 15px;
   width: 90%;
   height: 350px;
   margin: auto;
-  /* position: sticky; */
-  /* top: 20vh; */
-  border: 6px solid black;
+  border: 1px solid grey;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
+  box-shadow: 0 25px 25px -35px rgba(0, 0, 0, 0.15);
+
+  //invisible shadow...
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 80%;
+    bottom: 0.6em;
+    z-index: -1;
+    box-shadow: 0 0.5em 0.5em 0em rgba(black, 0.15);
+  }
+
+  &::before {
+    left: 0.25em;
+    right: 2em;
+    background: pink;
+    transform: rotate(-3deg);
+  }
+  &::after {
+    right: 0.25em;
+    left: 2em;
+    background: lightblue;
+    transform: rotate(3deg);
+  }
 
   @media (min-width: 768px) {
     width: 75%;
     height: 300px;
-  }
-
-  & .title {
-    padding: 0.5rem;
-    background-color: black;
-    color: grey;
-    transition: ${({ theme }) => theme.transitions.quick};
-  }
-
-  &:hover {
-    .half {
-      transform: scale(0.8);
-    }
-  }
-
-  @media (min-width: 768px) {
-    /* max-width: 200px; */
   }
 `;
 
@@ -115,8 +120,8 @@ export const StyledAsideImage = styled.div`
   right: ${({ gender }) => (gender === "men" ? 0 : "")};
   width: 50%;
   height: 100%;
+  transform: scale(0.8);
   border-radius: 15px;
-  background-color: black;
   background-image: ${({ gender }) =>
     gender === "women" ? `url(${women})` : `url(${men})`};
   background-position: ${({ gender }) =>
@@ -124,16 +129,42 @@ export const StyledAsideImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   transition: ${({ theme }) => theme.transitions.quick};
+  overflow: hidden;
+
+  & .title {
+    width: 130%;
+    position: absolute;
+    bottom: 0;
+    left: ${({ gender }) => (gender === "women" ? 0 : "")};
+    right: ${({ gender }) => (gender === "men" ? 0 : "")};
+    padding: 0.5rem;
+    background-color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+
+    transition: ${({ theme }) => theme.transitions.quick};
+
+    &.women,
+    &.men {
+      background-color: ${({ theme }) => theme.colors.white};
+    }
+
+    &.women {
+      color: violet;
+      transform: rotate(-10deg);
+    }
+
+    &.men {
+      color: teal;
+      transform: rotate(10deg);
+    }
+  }
 
   &:hover {
-    /* & {
-      transform: scale(0.8);
-    } */
     .title {
-      font-size: 3rem;
-      color: teal;
-      transform: ${({ gender }) =>
-        gender === "women" ? "rotate(-9deg)" : "rotate(9deg)"};
+      font-size: 2.5rem;
     }
   }
 

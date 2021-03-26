@@ -4,6 +4,10 @@ import store from "./store";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 
+//custom hook
+
+// import { useModalState } from "./hooks/useModalState";
+
 //components
 
 import { DiscountBar } from "./components/DiscountBar";

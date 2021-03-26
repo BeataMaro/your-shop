@@ -58,7 +58,7 @@ img {
 
 .sticky {
   position: fixed;
-  top: 0;
+  top: -2%;
   width: 100%;
   background-color: rgba(0,0,0,.2);
   transform: scale(.9);
