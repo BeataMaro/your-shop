@@ -2,7 +2,7 @@ export default {
   colors: {
     main: "#347474f",
     dark: "#263238",
-    grey: "#546e7a",
+    grey: "#4e616a",
     lightgrey: "#a5aaaf",
     greyblue: "#c8dcdc",
     gold: "#a0a000",

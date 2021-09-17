@@ -35,6 +35,10 @@ const Cart = ({ cartProps }) => {
         <span>Buy</span>
       </button>
       <div>
+        Do you have a Promo Code?
+        <input type='text' />
+      </div>
+      <div>
         <Link to='/'>
           <span>Continue shopping</span>
         </Link>

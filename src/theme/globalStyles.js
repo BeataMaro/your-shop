@@ -14,7 +14,10 @@ html {
 }
 body {
   font-size: ${({ theme }) => theme.fonts.fsNormal};
+}
 
+html, body {
+  min-height: 100%;
 }
 
 .App {
@@ -34,6 +37,14 @@ body {
 
 ::selection {
   background-color: ${({ theme }) => theme.colors.gold} ;
+}
+
+.start-modal {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: black;
+  color: tomato;
+  box-shadow: inset 1px 1px 20px  rgba(0,0,0,.6);
 }
 
 ul li {

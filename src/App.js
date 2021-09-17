@@ -23,7 +23,7 @@ import { NavFooter } from "./components/NavFooter";
 import { Footer } from "./components/Footer";
 import Main from "./components/Main/";
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <div className='App'>
@@ -57,6 +57,6 @@ function App() {
       </div>
     </Provider>
   );
-}
+};
 
 export default App;

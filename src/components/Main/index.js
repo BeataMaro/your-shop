@@ -9,10 +9,21 @@ const Main = () => {
   };
   return (
     <>
-      <button onClick={toggleState}>Open Modal</button>
+      <div className='start-modal' onClick={toggleState}>
+        Get a gift!
+      </div>
       {isModalOpen && (
         <Modal id='modal' isOpen={isModalOpen} onClose={toggleState}>
-          <div className='box-body'>I am the content of the modal</div>
+          <div className='box-body'>Don't miss out this opportunity!</div>
+          <span>Copy Promo Code: </span>
+          <span
+            className='code'
+            onClick={() => {
+              navigator.clipboard.writeText("FREE-SHIPPING");
+            }}
+          >
+            FREE-SHIPPING
+          </span>
         </Modal>
       )}
     </>

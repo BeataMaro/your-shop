@@ -64,9 +64,10 @@ const Modal = styled.div`
       .x-close {
         font-size: 35px;
         line-height: 35px;
-        font-weight: 400;
+        width: 35px;
+        font-weight: 600;
         text-shadow: none;
-        color: black;
+        color: blue;
         cursor: pointer;
         &:hover {
           opacity: 0.5;
@@ -78,6 +79,15 @@ const Modal = styled.div`
       padding: 0px;
       width: auto;
       height: auto;
+    }
+    .code {
+      cursor: pointer;
+      color: tomato;
+      font-weight: bold;
+
+      &:active {
+        color: teal;
+      }
     }
     .box-footer {
       height: 48px;

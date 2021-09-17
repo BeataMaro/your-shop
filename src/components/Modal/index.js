@@ -62,7 +62,7 @@ class Modal extends React.Component {
       >
         <div className='box-dialog'>
           <div className='box-header'>
-            <h4 className='box-title'>Pure React Modal</h4>
+            <h4 className='box-title'>Free shipping day!</h4>
             <button onClick={this.handleClick} className='close'>
               ×
             </button>
@@ -70,7 +70,7 @@ class Modal extends React.Component {
           <div className='box-content'>{children}</div>
           <div className='box-footer'>
             <button onClick={this.handleClick} className='close'>
-              Close
+              Start shopping
             </button>
           </div>
         </div>

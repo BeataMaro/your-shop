@@ -57,18 +57,17 @@ export const NavBar = ({ aside, url }) => {
             <StyledAsideImage gender='women'>
               <div className={end === "women" ? `${endpoint} title` : "title"}>
                 <Male size='30' />
-                <span>Women</span>
+                <span className='link'>Women</span>
               </div>
             </StyledAsideImage>
           </Link>
         </div>
-
         <div>
           <Link to='/products/men'>
             <StyledAsideImage gender='men'>
               <div className={end === "men" ? `${endpoint} title` : "title"}>
                 <Female size='30' />
-                <span>Men</span>
+                <span className='link'>Men</span>
               </div>
             </StyledAsideImage>
           </Link>

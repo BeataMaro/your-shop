@@ -25,6 +25,7 @@ const StyledDiscountBar = styled.aside`
   background-color: ${({ theme }) => theme.colors.darkviolet};
   padding: 1em;
   font-weight: 500;
+  z-index: 1000;
 
   .sale {
     animation: ${blink} 1.3s infinite alternate ease-out;
