@@ -4,14 +4,15 @@
   "description": "e-shop",
   "version": "0.1.0",
   "engines": {
-    "node": "14.x",
-    "npm": "7.x"
+    "node": "16.x",
+    "npm": "9.x"
   },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.3",
     "@testing-library/user-event": "^7.1.2",
+    "core-js": "^3.29.0",
     "gulp-sass": "^4.1.1",
     "nanoid": "^3.1.32",
     "node": "^14.21.3",
@@ -37,7 +38,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

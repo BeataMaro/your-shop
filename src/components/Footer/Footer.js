@@ -4,7 +4,7 @@ import StyledFooter from "./StyledFooter";
 const Footer = () => {
   return (
     <StyledFooter>
-      &copy; Copyrights 2021
+      &copy; Copyrights 2023
       <div>
         Icons made by{" "}
         <a
