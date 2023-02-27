@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/your-shop/public/static/css/main.ae37d1f8.chunk.css",
+    "main.js": "/your-shop/public/static/js/main.20eee9a7.chunk.js",
+    "main.js.map": "/your-shop/public/static/js/main.20eee9a7.chunk.js.map",
+    "runtime-main.js": "/your-shop/public/static/js/runtime-main.6ee5c459.js",
+    "runtime-main.js.map": "/your-shop/public/static/js/runtime-main.6ee5c459.js.map",
+    "static/js/2.cc0c453d.chunk.js": "/your-shop/public/static/js/2.cc0c453d.chunk.js",
+    "static/js/2.cc0c453d.chunk.js.map": "/your-shop/public/static/js/2.cc0c453d.chunk.js.map",
+    "index.html": "/your-shop/public/index.html",
+    "precache-manifest.da7b0d114e3b094c0a58b7b7df794f66.js": "/your-shop/public/precache-manifest.da7b0d114e3b094c0a58b7b7df794f66.js",
+    "service-worker.js": "/your-shop/public/service-worker.js",
+    "static/css/main.ae37d1f8.chunk.css.map": "/your-shop/public/static/css/main.ae37d1f8.chunk.css.map",
+    "static/js/2.cc0c453d.chunk.js.LICENSE.txt": "/your-shop/public/static/js/2.cc0c453d.chunk.js.LICENSE.txt",
+    "static/media/mom-black-jeans2.jpg": "/your-shop/public/static/media/mom-black-jeans2.cc504939.jpg",
+    "static/media/nordgreen-unsplash.jpg": "/your-shop/public/static/media/nordgreen-unsplash.f7167717.jpg",
+    "static/media/skirt.jpg": "/your-shop/public/static/media/skirt.b5d75e05.jpg",
+    "static/media/wesley-tingey-unsplash.jpg": "/your-shop/public/static/media/wesley-tingey-unsplash.075972ff.jpg",
+    "static/media/white-sweater.jpg": "/your-shop/public/static/media/white-sweater.2801fa0a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ee5c459.js",
+    "static/js/2.cc0c453d.chunk.js",
+    "static/css/main.ae37d1f8.chunk.css",
+    "static/js/main.20eee9a7.chunk.js"
+  ]
+}
