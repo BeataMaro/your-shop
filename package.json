@@ -37,6 +37,8 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -57,6 +59,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/register": "^7.13.16"
+    "@babel/register": "^7.13.16",
+    "gh-pages": "^5.0.0"
   }
 }
