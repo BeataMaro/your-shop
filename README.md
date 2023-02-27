@@ -1,4 +1,4 @@
-## Website demo: https://your-e-shop.herokuapp.com
+
 ## Your Shop  
 ### Ecommerce Fashion Website  
 ### Work in progress...
